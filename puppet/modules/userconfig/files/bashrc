@@ -1,0 +1,44 @@
+#!/bin/bash
+
+[ -z "$PS1" ] && return
+
+export HISTCONTROL=ignoredups:ignorespace
+alias h=history
+
+YELLOW="\[\033[33m\]"
+NORMAL="\[\033[0m\]"
+PS1="[\u@${YELLOW}\h${NORMAL}:\W]\$ "
+
+if [ -n "$(command -v vim)" ]; then
+    EDITOR=vim
+else
+    EDITOR=vi
+fi
+export EDITOR
+
+# PAGER
+if [ -n "$(command -v less)" ]; then
+    PAGER="less -FirSwX"
+    MANPAGER="less -FiRswX"
+else
+    PAGER=more
+    MANPAGER="$PAGER"
+fi
+export PAGER MANPAGER
+
+export PATH=$PATH:~/bin
+
+alias e=${EDITOR}
+
+alias ls="ls -h --color"
+alias la="ls -ha --color"
+alias ll="ls -hl --color"
+alias lal="ls -hal --color"
+
+alias grep="grep --color"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ~="cd ~"
+
+alias psgrep="ps -A | grep -v grep | grep"
