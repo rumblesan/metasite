@@ -18,12 +18,24 @@ class metasite {
         gid      => 3001
     }
 
-    file { [ $www_root, $metasite_www, $metasite_logs ]:
+    file { [ $www_root, $metasite_logs ]:
         ensure  => 'directory',
         owner   => $metasite_user,
         group   => $metasite_group,
         require => Userconfig[$metasite_user]
     }
+
+    file { $metasite_www:
+        ensure  => 'link',
+        owner   => $metasite_user,
+        group   => $metasite_group,
+        target  => '/opt/metasite/html',
+        require => [
+            Userconfig[$metasite_user],
+            File[$www_root]
+        ]
+    }
+
 
 }
 
