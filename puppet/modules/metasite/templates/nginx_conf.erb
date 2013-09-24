@@ -1,0 +1,16 @@
+
+server {
+
+    listen   80;
+
+    server_name <%= @metasite_host %>;
+
+    error_log <%= @metasite_logs %>/main_err.log;
+
+    location / {
+        autoindex on;
+        root <%= @metasite_www %>;
+    }
+
+}
+

@@ -11,6 +11,10 @@ class metasite {
 
     $metasite_host  = 'metapiano.com'
 
+    class { 'metasite::nginx' :
+        logdir => $metasite_logs
+    }
+
     userconfig { $metasite_user:
         username  => $metasite_user,
         uid       => 2001,
@@ -35,7 +39,6 @@ class metasite {
             File[$www_root]
         ]
     }
-
 
 }
 
