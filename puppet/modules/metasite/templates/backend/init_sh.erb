@@ -20,14 +20,14 @@
 
 # Do NOT "set -e"
 
-PROJECT=<%= imgservice_dir %>
-VIRTUALENV=<%= imgservice_virtenv %>
-PORT=<%= imgservice_port %>
-LOGDIR=<%= gunicorn_logdir %>
+PROJECT=<%= @metasite_backend_dir %>
+VIRTUALENV=<%= @metasite_backend_virtenv %>
+PORT=<%= @metasite_backend_port %>
+LOGDIR=<%= $gunicorn_logdir %>
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/bin:/usr/bin
-USER=<%= imgservice_user %>
-GROUP=<%= imgservice_group %>
+USER=<%= $username %>
+GROUP=<%= $groupname %>
 IP=127.0.0.1
 WORKERS=5
 # I am lazy and just call the init script gunicorn-project

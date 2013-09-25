@@ -15,6 +15,13 @@ class metasite {
         logdir => $metasite_logs
     }
 
+    class { 'metasite::backend':
+        username   => $metasite_user,
+        groupname  => $metasite_group,
+        logdir     => $metasite_logs,
+        codefolder => '/opt/metasite'
+    }
+
     userconfig { $metasite_user:
         username  => $metasite_user,
         uid       => 2001,
