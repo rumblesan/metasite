@@ -15,7 +15,7 @@ app.wsgi_app = ProxyFix(app.wsgi_app)
 app.debug = True
 
 
-@app.route('/api', methods=['GET'])
+@app.route('/service/api', methods=['GET'])
 def main():
     return "hello\n"
 
