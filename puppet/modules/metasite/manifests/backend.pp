@@ -1,6 +1,8 @@
 
 class metasite::backend( $username, $groupname, $logdir, $codefolder ) {
 
+    include postgresql::lib::devel
+
     $metasite_backend_dir     = '/opt/services/metasite-backend'
     $metasite_backend_virtenv = '/var/envs/metasite-backend'
     $metasite_backend_port    = '8888'
