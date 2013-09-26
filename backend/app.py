@@ -1,19 +1,8 @@
 
-from flask import Flask, Response
+from flask import Response
+from core import app
 
-from werkzeug.contrib.fixers import ProxyFix
-
-import os
 import json
-
-app = Flask('metapiano')
-config = os.path.join(app.root_path, 'config', 'production.cfg')
-app.config.from_pyfile(config)
-
-app.wsgi_app = ProxyFix(app.wsgi_app)
-
-
-app.debug = True
 
 
 def data_response(data):
