@@ -18,6 +18,8 @@ class metasite::backend( $username, $groupname, $logdir, $codefolder ) {
 
     file { $metasite_backend_dir:
         ensure  => link,
+        owner   => $username,
+        group   => $groupname,
         target  => "${codefolder}/backend",
         require => File['/opt/services']
     }
