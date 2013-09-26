@@ -19,7 +19,8 @@ class metasite::nginx ($logdir) {
         target  => '/etc/nginx/sites-available/metasite',
         owner   => 'root',
         group   => 'root',
-        require => Package['nginx']
+        require => Package['nginx'],
+        notify  => Service['nginx']
     }
 
     file { '/etc/nginx/sites-enabled/default':
