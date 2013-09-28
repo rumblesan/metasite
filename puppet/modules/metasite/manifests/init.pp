@@ -1,6 +1,8 @@
 
 class metasite {
 
+    include metasite::db
+
     $metasite_user  = 'meta'
     $metasite_group = 'meta'
 
