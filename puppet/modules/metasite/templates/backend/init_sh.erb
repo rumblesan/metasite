@@ -33,8 +33,8 @@ WORKERS=5
 # I am lazy and just call the init script gunicorn-project
 NAME=`basename $0`
 DESC=$NAME
-LOGFILE="$LOGDIR$NAME.log"
-PIDFILE="$PROJECT$NAME.pid"
+LOGFILE="$LOGDIR/$NAME.log"
+PIDFILE="$PROJECT/$NAME.pid"
 CMD="gunicorn --user=$USER --group=$GROUP --daemon --workers=$WORKERS --bind=$IP:$PORT --pid=$PIDFILE --log-file=$LOGFILE --log-level=info app:app"
 
 # Load the VERBOSE setting and other rcS variables
