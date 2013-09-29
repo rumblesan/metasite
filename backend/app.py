@@ -14,9 +14,9 @@ def data_response(data, status_code=200):
     )
 
 
-@app.route('/service/api', methods=['GET'])
+@app.route('/', methods=['GET'])
 def main():
-    return data_response({'message': 'no data'})
+    return data_response({'status': 'running'})
 
 
 @app.route('/submit/poem', methods=['POST'])
