@@ -1,5 +1,5 @@
 
-node 'metapiano.com' {
+node /^app[0-9]+\.metapiano\.com$/ {
 
     include metasite
 
