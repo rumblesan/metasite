@@ -3,7 +3,27 @@ from flask import Response, request
 from core import app
 from database import db, Poem
 
+from HTMLParser import HTMLParser
+
 import json
+
+
+class MLStripper(HTMLParser):
+    def __init__(self):
+        self.reset()
+        self.fed = []
+
+    def handle_data(self, d):
+        self.fed.append(d)
+
+    def get_data(self):
+        return ''.join(self.fed)
+
+
+def strip_tags(html):
+    s = MLStripper()
+    s.feed(html)
+    return s.get_data()
 
 
 def data_response(data, status_code=200):
@@ -29,7 +49,7 @@ def submit_poem():
 
     data = json.loads(request.data)
     author = data['author']
-    text = data['text']
+    text = strip_tags(data['text'])
     if not author:
         data_response({
             'status': 'error',
