@@ -7,5 +7,9 @@ node 'metapiano.com' {
         ensure => present
     }
 
+    package { 'icecast2':
+        ensure => present
+    }
+
 }
 
