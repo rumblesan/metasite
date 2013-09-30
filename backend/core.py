@@ -12,6 +12,8 @@ app = Flask('metapiano')
 config = os.path.join(app.root_path, 'config', 'production.cfg')
 app.config.from_pyfile(config)
 
+app.config.from_envvar('METASITE_CONFIG')
+
 app.wsgi_app = ProxyFix(app.wsgi_app)
 
 app.debug = True
