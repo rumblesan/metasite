@@ -1,4 +1,4 @@
 *.pyc
 .vagrant
 *.pid
-html/
+manual/
