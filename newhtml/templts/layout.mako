@@ -5,8 +5,8 @@
 
         <title>MetaPiano</title>
 
-        <link rel="stylesheet" type='text/css' href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" type='text/css' href="css/main.css"/>
+        <link rel="stylesheet" type='text/css' href="/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type='text/css' href="/css/main.css"/>
 
         <%block name="scripts" />
 
