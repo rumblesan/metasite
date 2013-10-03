@@ -13,8 +13,8 @@
 <%def name="poemslink()">
     <a href='/sp/poems.html'>Poems</a>
 </%def>
-<%def name="writelink()">
-    <a href='/sp/write.html'>Write</a>
+<%def name="gallerylink()">
+    <a href='/sp/gallery.html'>Gallery</a>
 </%def>
 <%def name="documentslink()">
     <a href='/sp/documents.html'>Documents</a>

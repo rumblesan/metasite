@@ -61,7 +61,7 @@
                         </div>
                         <div class='col-sm-2'>
                             <strong>
-                                ${self.writelink()}
+                                ${self.gallerylink()}
                             </strong>
                         </div>
                         <div class='col-sm-2'>
