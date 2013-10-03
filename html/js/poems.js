@@ -34,17 +34,20 @@ $(document).ready(function () {
 
     poemfuncs = new PoemFuncs();
 
+    $.get('/service/poems/site', function (data) {
+        currentid = data[data.length].id;
+        poemfuncs.updatePoems(data);
+    }).fail(function () {
+        console.log('failure');
+    });
+
     $('#nextpoems').click(function () {
         var url;
         console.log('next');
 
-        if (currentid) {
-            url = '/service/poems/site?latestId=' + currentid.toString();
-        } else {
-            url = '/service/poems/site';
-        }
+        url = '/service/poems/site?latestId=' + currentid.toString();
 
-        $.get('/service/poems/site', function (data) {
+        $.get(url, function (data) {
             currentid = data[data.length].id;
             poemfuncs.updatePoems(data);
         }).fail(function () {
