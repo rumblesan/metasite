@@ -2,7 +2,7 @@
 <%inherit file="layout.mako" />
 
 <%def name="homelink()">
-    <a href='/en'>Home</a>
+    <a href='/en/index.html'>Home</a>
 </%def>
 <%def name="creatorslink()">
     <a href='/en/creators.html'>Creators</a>
