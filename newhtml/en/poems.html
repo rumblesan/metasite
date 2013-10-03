@@ -1,0 +1,51 @@
+
+<%inherit file="templts/base_en.mako" />
+
+    <%block name="scripts">
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/poems.js"></script>
+    </%block>
+
+
+            <div id='content'>
+
+                <div class='row poemcontrols'>
+                    <div class='col-sm-4'>
+                    </div>
+                    <div class='col-sm-4'>
+                        <div class='btn-group'>
+                            <button id='nextpoems' class='btn'>Next</button>
+                            <button id='backpoems' class='btn'>Back</button>
+                        </div>
+                    </div>
+                    <div class='col-sm-4'>
+                    </div>
+                </div>
+
+                <div class='row poems'>
+                    <ul>
+
+                        <li>
+                            <div class='col-sm-2'>
+                                Author
+                            </div>
+
+                            <div class='col-sm-10'>
+                                this is a large test poem to see what we can fit here,
+                                hopefully the text comes out correctly
+                                blah blah blah blah
+                                All good gentlemen are asked to come to the aid of the party
+                                The quick brown fox jumped over the lazy dog
+                                Some more text here
+                                The quick brown fox jumped over the lazy dog
+                            </div>
+                       </li>
+                   </ul>
+                </div>
+
+            </div>
+
+<%def name="translatelink()">
+    <a href='/sp/poems.html'>Translate</a>
+</%def>
+

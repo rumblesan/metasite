@@ -1,0 +1,37 @@
+
+<%inherit file="templts/base_en.mako" />
+
+    <%block name="scripts">
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/write.js"></script>
+    </%block>
+
+            <div id='content'>
+
+                <div class='well'>
+
+                        <form>
+
+                            <div class='form-control'>
+                                <label for='author'>Author</label>
+                                <input id='author' name='author' type='text'>
+                            </div>
+
+                            <div class='form-control'>
+                                <label for='poem'>Poem</label>
+                                <input id='poem' name='poem' type='text' size=10>
+                            </div>
+
+                            <button class='btn btn-primary'>Submit</button>
+
+                        </form>
+
+                </div>
+
+            </div>
+
+<%def name="translatelink()">
+    <a href='/sp/write.html'>Translate</a>
+</%def>
+
+
