@@ -27,7 +27,7 @@
                     </div>
 
                     <div class='col-sm-2'>
-                        Translate
+                        ${self.translatelink()}
                     </div>
 
                 </div>
@@ -41,32 +41,32 @@
 
                         <div class='col-sm-2'>
                             <strong>
-                                Home
+                                ${self.homelink()}
                             </strong>
                         </div>
                         <div class='col-sm-2'>
                             <strong>
-                                Creators
+                                ${self.creatorslink()}
                             </strong>
                         </div>
                         <div class='col-sm-2'>
                             <strong>
-                                Listen
+                                ${self.listenlink()}
                             </strong>
                         </div>
                         <div class='col-sm-2'>
                             <strong>
-                                Poems
+                                ${self.poemslink()}
                             </strong>
                         </div>
                         <div class='col-sm-2'>
                             <strong>
-                                Write
+                                ${self.writelink()}
                             </strong>
                         </div>
                         <div class='col-sm-2'>
                             <strong>
-                                Documents
+                                ${self.documentslink()}
                             </strong>
                         </div>
 
@@ -86,7 +86,7 @@
                     <div class='col-sm-2'>
                         <span class='contact'>
                             <h4>
-                                contact
+                                <a href='mailto:infometapiano@gmail.com'>contact</a>
                             </h4>
                         </span>
                     </div>
