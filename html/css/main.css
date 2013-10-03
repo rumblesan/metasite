@@ -81,3 +81,7 @@ button a {
    text-decoration: none;
 }
 
+footer a, a.translatelink {
+   color: #000000;
+}
+

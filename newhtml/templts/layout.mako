@@ -34,10 +34,10 @@
 
                 <div class='row'>
 
-                    <div class='col-sm-4'>
+                    <div class='col-sm-6'>
                     </div>
 
-                    <div id='navbar' class='row col-sm-8'>
+                    <div id='navbar' class='row col-sm-6'>
 
                         <div class='col-sm-2'>
                             <strong>
@@ -46,22 +46,7 @@
                         </div>
                         <div class='col-sm-2'>
                             <strong>
-                                ${self.creatorslink()}
-                            </strong>
-                        </div>
-                        <div class='col-sm-2'>
-                            <strong>
-                                ${self.listenlink()}
-                            </strong>
-                        </div>
-                        <div class='col-sm-2'>
-                            <strong>
                                 ${self.poemslink()}
-                            </strong>
-                        </div>
-                        <div class='col-sm-2'>
-                            <strong>
-                                ${self.gallerylink()}
                             </strong>
                         </div>
                         <div class='col-sm-2'>
