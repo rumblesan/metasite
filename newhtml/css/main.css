@@ -6,6 +6,32 @@ body {
     color: #000000;
 }
 
+.piano-image {
+    height: 300;
+    background-image: url(/images/pianobg.jpg);
+}
+.index-header {
+    background-color: #FFFFFF;
+    background-color: rgba(255,255,255,0.5);
+}
+.index-header h3{
+    margin: 0px;
+    padding: 20px;
+}
+.index-info {
+    background-color: #FFFFFF;
+}
+.index-info h4 {
+    padding: 10px;
+}
+.index-line {
+    height: 5px;
+    background-color: #000000;
+}
+.index-body {
+    height: 300px;
+}
+
 #header {
     background-image: url(/images/header-faded.jpg);
 }
