@@ -74,5 +74,16 @@ def get_poems():
     return data_response([p.info() for p in poems])
 
 
+@app.route('/poems/site', methods=['GET'])
+def site_poems():
+    last_id = int(request.args.get('latestId', '0'))
+
+    if last_id == 0:
+        poems = db.session.query(Poem).limit(10)
+    else:
+        poems = db.session.query(Poem).filter('id<%d' % last_id).limit(10)
+    return data_response([p.info() for p in poems])
+
+
 if __name__ == '__main__':
     app.run()

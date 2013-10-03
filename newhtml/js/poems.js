@@ -35,39 +35,39 @@ $(document).ready(function () {
     poemfuncs = new PoemFuncs();
 
     $('#nextpoems').click(function () {
+        var url;
         console.log('next');
+
+        if (currentid) {
+            url = '/service/poems/site?latestId=' + currentid.toString();
+        } else {
+            url = '/service/poems/site';
+        }
+
+        $.get('/service/poems/site', function (data) {
+            currentid = data[data.length].id;
+            poemfuncs.updatePoems(data);
+        }).fail(function () {
+            console.log('failure');
+        });
     });
 
     $('#backpoems').click(function () {
-        console.log('last');
+        var url;
+        if (currentid) {
+            currentid -= 10;
+            url = '/service/poems/site?latestId=' + currentid.toString();
+        } else {
+            url = '/service/poems/site';
+        }
 
-        var data = [
-            {
-                author: 'Guy',
-                text: 'Some text'
-            },
-            {
-                author: 'Foo    jj',
-                text: 'Some text'
-            },
-            {
-                author: 'aegwegeg',
-                text: 'kl;adjgh;oearhgo;aehrgoeg'
-            },
-        ];
-        poemfuncs.updatePoems(data);
-
-        /*
-        $.get({
-            url: '/service/poems',
-            success: function () {
-                console.log('success');
-            },
-            failure: function () {
-                console.log('failure');
-            }
+        $.get('/service/poems/site', function (data) {
+            currentid = data[data.length].id;
+            poemfuncs.updatePoems(data);
+        }).fail(function () {
+            console.log('failure');
         });
-        */
+
     });
 
 });

@@ -57,24 +57,26 @@ footer .contact {
     margin: 10px;
 }
 
-
-a {
+button a {
+   color: #000000;
+}
+#navbar a {
    color: #FFFFFF;
 }
-a:link {
-   color: #FFFFFF;
-   text-decoration: none;
-}
-a:visited {
+#navbar a:link {
    color: #FFFFFF;
    text-decoration: none;
 }
-a:active {
+#navbar a:visited {
+   color: #FFFFFF;
+   text-decoration: none;
+}
+#navbar a:active {
    color: #FFFFFF;
    font-weight: bold;
    text-decoration: none;
 }
-a:hover {
+#navbar a:hover {
    color: #FFFFFF;
    text-decoration: none;
 }
