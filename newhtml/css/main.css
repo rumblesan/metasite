@@ -58,4 +58,24 @@ footer .contact {
 }
 
 
+a {
+   color: #FFFFFF;
+}
+a:link {
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a:visited {
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a:active {
+   color: #FFFFFF;
+   font-weight: bold;
+   text-decoration: none;
+}
+a:hover {
+   color: #FFFFFF;
+   text-decoration: none;
+}
 
