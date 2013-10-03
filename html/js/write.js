@@ -13,7 +13,12 @@ WriteFuncs.prototype.submitPoem = function (newpoems) {
     author = $('#author').val();
     poem = $('#poem').val();
 
-    console.log(author, poem);
+    $.post('/service/submit/poem', {
+        author: author,
+        text: poem
+    }, function () {
+        console.log(author, poem);
+    });
 
 };
 
@@ -25,7 +30,7 @@ $(document).ready(function () {
 
     $('button').click(function (e) {
         console.log(e);
-        e.preventDefaults();
+        e.preventDefault();
         writeFuncs.submitPoem();
         return false;
     });
