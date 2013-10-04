@@ -6,3 +6,8 @@ sudo apt-get update
 ln -s /opt/metasite/puppet /etc/puppet
 
 puppet apply --modulepath /etc/puppet/modules /etc/puppet/manifests/site.pp
+
+cd /opt/services/metasite-backend
+/var/envs/metasite-backend/bin/python database.py db upgrade
+
+/etc/init.d/metasite-backend restart
