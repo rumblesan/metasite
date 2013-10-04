@@ -35,21 +35,24 @@ $(document).ready(function () {
     poemfuncs = new PoemFuncs();
 
     $.get('/service/poems/site', function (data) {
-        currentid = data[data.length].id;
-        poemfuncs.updatePoems(data);
+        if (data.length > 0) {
+            currentid = data[data.length - 1].id;
+            poemfuncs.updatePoems(data);
+        }
     }).fail(function () {
         console.log('failure');
     });
 
     $('#nextpoems').click(function () {
         var url;
-        console.log('next');
 
         url = '/service/poems/site?latestId=' + currentid.toString();
 
         $.get(url, function (data) {
-            currentid = data[data.length].id;
-            poemfuncs.updatePoems(data);
+            if (data.length > 0) {
+                currentid = data[data.length - 1].id;
+                poemfuncs.updatePoems(data);
+            }
         }).fail(function () {
             console.log('failure');
         });
@@ -59,14 +62,19 @@ $(document).ready(function () {
         var url;
         if (currentid) {
             currentid -= 10;
+            if (currentid < 1) {
+                currentid = 1;
+            }
             url = '/service/poems/site?latestId=' + currentid.toString();
         } else {
             url = '/service/poems/site';
         }
 
-        $.get('/service/poems/site', function (data) {
-            currentid = data[data.length].id;
-            poemfuncs.updatePoems(data);
+        $.get(url, function (data) {
+            if (data.length > 0) {
+                currentid = data[data.length - 1].id;
+                poemfuncs.updatePoems(data);
+            }
         }).fail(function () {
             console.log('failure');
         });
