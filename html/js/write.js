@@ -13,19 +13,17 @@ WriteFuncs.prototype.submitPoem = function (newpoems) {
     author = $('#author').val();
     poem = $('#poem').val();
 
-    console.log('submitting poem');
-
     $.ajax({
         type: 'POST',
         url: '/service/submit/poem',
-        data: JSON.stringify({
+        data: {
             author: author,
             text: poem
-        }),
+        },
         success: function () {
             console.log(author, poem);
         },
-        dataType: 'json'
+        dataType: 'application/json'
     });
 
 };
