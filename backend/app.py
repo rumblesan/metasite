@@ -47,7 +47,7 @@ def submit_poem():
             'message': 'Please submit json'
         }, 400)
 
-    data = json.loads(request.data)
+    data = json.loads(request.form)
     author = data['author']
     text = strip_tags(data['text'])
     if not author:
