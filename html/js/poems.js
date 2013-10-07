@@ -46,7 +46,6 @@ $(document).ready(function () {
 
     $('#nextpoems').click(function () {
 
-        console.log
         console.log(currentid);
         currentid += 10;
         console.log(currentid);
