@@ -41,13 +41,11 @@ def main():
 
 @app.route('/submit/poem', methods=['POST'])
 def submit_poem():
-    if request.headers['Content-Type'] != 'application/json':
-        data_response({
-            'status': 'error',
-            'message': 'Please submit json'
-        }, 400)
 
-    data = json.loads(request.form)
+    app.logger.debug('submitting poem')
+
+    data = request.form
+    app.logger.debug(data)
     author = data['author']
     text = strip_tags(data['text'])
     if not author:
@@ -62,6 +60,7 @@ def submit_poem():
         }, 400)
     else:
         poem = Poem(author, text)
+        app.logger.debug('created poem')
         db.session.add(poem)
         db.session.commit()
         return data_response(poem.info())
