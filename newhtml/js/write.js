@@ -21,7 +21,15 @@ WriteFuncs.prototype.submitPoem = function (newpoems) {
             text: poem
         },
         success: function () {
-            console.log(author, poem);
+            console.log('success');
+            $('#submitpage form').remove();
+            $('#submitpage').html('thankyou for submitting a poem');
+        },
+        error: function () {
+            console.log('errror');
+            console.log($('#submitpage form'));
+            $('#submitpage form').remove();
+            $('#submitpage').html('Sorry, there was a problem submitting the poem');
         }
     });
 
