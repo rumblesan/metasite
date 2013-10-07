@@ -22,8 +22,7 @@ WriteFuncs.prototype.submitPoem = function (newpoems) {
         },
         success: function () {
             console.log(author, poem);
-        },
-        dataType: 'application/json'
+        }
     });
 
 };
