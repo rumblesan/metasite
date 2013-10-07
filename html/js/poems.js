@@ -30,13 +30,14 @@ $(document).ready(function () {
 
     var currentid, poemfuncs;
 
-    currentid = null;
+    currentid = 0;
 
     poemfuncs = new PoemFuncs();
 
     $.get('/service/poems/site', function (data) {
         if (data.length > 0) {
-            currentid = data[data.length - 1].id;
+            currentid = data[0].id;
+            console.log(currentid);
             poemfuncs.updatePoems(data);
         }
     }).fail(function () {
@@ -44,13 +45,18 @@ $(document).ready(function () {
     });
 
     $('#nextpoems').click(function () {
-        var url;
 
-        url = '/service/poems/site?latestId=' + currentid.toString();
+        console.log
+        console.log(currentid);
+        currentid += 10;
+        console.log(currentid);
+
+        var url = '/service/poems/site?latestId=' + currentid.toString();
 
         $.get(url, function (data) {
             if (data.length > 0) {
-                currentid = data[data.length - 1].id;
+                currentid = data[0].id;
+                console.log(currentid);
                 poemfuncs.updatePoems(data);
             }
         }).fail(function () {
@@ -60,19 +66,19 @@ $(document).ready(function () {
 
     $('#backpoems').click(function () {
         var url;
-        if (currentid) {
-            currentid -= 10;
-            if (currentid < 1) {
-                currentid = 1;
-            }
-            url = '/service/poems/site?latestId=' + currentid.toString();
-        } else {
-            url = '/service/poems/site';
+
+        console.log(currentid);
+        currentid -= 10;
+        if (currentid < 10) {
+            currentid = 10;
         }
+        console.log(currentid);
+        url = '/service/poems/site?latestId=' + currentid.toString();
 
         $.get(url, function (data) {
             if (data.length > 0) {
-                currentid = data[data.length - 1].id;
+                currentid = data[0].id;
+                console.log(currentid);
                 poemfuncs.updatePoems(data);
             }
         }).fail(function () {

@@ -77,10 +77,12 @@ def get_poems():
 def site_poems():
     last_id = int(request.args.get('latestId', '0'))
 
+    q = db.session.query(Poem).order_by(Poem.id.desc())
+
     if last_id == 0:
-        poems = db.session.query(Poem).limit(10)
+        poems = q.limit(10)
     else:
-        poems = db.session.query(Poem).filter('id<%d' % last_id).limit(10)
+        poems = q.filter('id<=%d' % last_id).limit(10)
     return data_response([p.info() for p in poems])
 
 
