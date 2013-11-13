@@ -1,14 +1,19 @@
 body {
-    background-color: #3C3C3C;
+    background-color: rgb(230,230,230);
 }
 .container {
     background-color: #FFFFFF;
     color: #000000;
 }
 
+.buffer{
+    background-color: rgba(0,0,0,0);
+    height: 210;
+
+}
 .piano-image {
     height: 300;
-    background-image: url(/images/pianobg.jpg);
+    background-image: url(../images/pianobg.jpg);
 }
 .index-header {
     background-color: #FFFFFF;
@@ -19,21 +24,21 @@ body {
     padding: 20px;
 }
 .index-info {
-    background-color: #FFFFFF;
+    background-color: #41998C;
 }
 .index-info h4 {
     padding: 10px;
 }
 .index-line {
     height: 5px;
-    background-color: #000000;
+    background-color: #41998C;
 }
 .index-body {
     height: 300px;
 }
 
 #header {
-    background-image: url(/images/header-faded.jpg);
+    background-image: url(../images/header-faded.jpg);
 }
 #header h3 {
     margin: 10px 30px;
@@ -44,6 +49,7 @@ body {
     font-size: 13px;
     padding: 10px 0px;
 }
+
 
 #content {
     margin: 20px 0px;
