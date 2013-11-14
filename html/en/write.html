@@ -3,10 +3,13 @@
 
     <head>
 
-        <title>MetaPiano</title>
+        <title>Meta-Piano Extended</title>
 
-        <link rel="stylesheet" type='text/css' href="/css/bootstrap.min.css"/>
-        <link rel="stylesheet" type='text/css' href="/css/main.css"/>
+        <link rel="stylesheet" type='text/css' href="../css/bootstrap.min.css"/>
+        <link rel="stylesheet" type='text/css' href="../css/main.css"/>
+
+        <link rel="shortcut icon" href="../images/pianobg.jpg">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8 ">
 
         
         <script src="/js/jquery.min.js"></script>
@@ -19,57 +22,55 @@
         <div class='container'>
 
 
-            <div id='header'>
+            <div class="piano-image">
+                <div id='header'>
 
-                <div class='row'>
-                    <div class='col-sm-4'>
-                        <h3>Meta-Piano Extendido</h3>
+                    <div class='row'>
+                        <div class='col-sm-5'>
+                            <h3><a class='translatelink' href='index.html'>Meta-Piano Extended</a></h3>
+                        </div>
+
+                        <div  class='col-sm-7'>
+                            
+                            <div class='col-sm-2'>
+                                <h4><a class='translatelink' href='write.html'>Texts</a></h4>
+                                    
+                            </div>
+                            <div class='col-sm-3'> 
+                                    <h4><a class='translatelink' href='creators.html'>Creators</a></h4>
+                            </div>
+                            <div class='col-sm-3'>
+                                <h4><a class='translatelink' href='documents.html'>Documents</a></h4>
+
+                            </div>
+                            <div class='col-sm-2'>
+                                <h4><a class='translatelink' href='gallery.html'>Gallery</a></h4>
+
+                            </div>
+                            
+                            <div class='col-sm-1'>
+                                <h4><a class='translatelink' href='../sp/write.html'>Spanish</a></h4>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class='col-sm-6'>
-                    </div>
-
-                    <div class='col-sm-2'>
-                        
-    <a class='translatelink' href='/sp/write.html'>Spanish</a>
-
-                    </div>
-
                 </div>
 
-                <div class='row'>
-
-                    <div class='col-sm-6'>
-                    </div>
-
-                    <div id='navbar' class='row col-sm-6'>
-
-                        <div class='col-sm-2'>
-                            <strong>
-                                
-    <a href='/en/index.html'>Home</a>
-
-                            </strong>
-                        </div>
-                        <div class='col-sm-2'>
-                            <strong>
-                                
-    <a href='/en/poems.html'>Poems</a>
-
-                            </strong>
-                        </div>
-                        <div class='col-sm-2'>
-                            <strong>
-                                
-    <a href='/en/documents.html'>Documents</a>
-
-                            </strong>
+                <div class="buffer" >
+                    <div class="row">
+                        <div  class='col-sm-12'>
+                           <!--  <h1></h1>  -->                       
                         </div>
 
                     </div>
-
                 </div>
 
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="index-info">
+                           <strong><h4><a class='translatelink' href='https://www.facebook.com/events/254134524733887/'> Presentation: Meta-Piano Extended on Thursday, November 14th, 7:30pm. Betabeers San Juan</a></h4></strong>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             
@@ -85,12 +86,12 @@
 
                             <div class='form-group'>
                                 <label for='author'>Author</label>
-                                <input id='author' class='form-control' name='author' type='text' placeholder='Author'>
+                                <input id='author' class='form-control' name='author' type='text'>
                             </div>
 
                             <div class='form-group'>
-                                <label for='poem'>Poem</label>
-                                <input id='poem' class='form-control' name='poem' type='text' size=10></textarea>
+                                <label for='poem'>Text</label>
+                                <textarea id='poem' class='form-control' name='poem' type='text' rows=10></textarea>
                             </div>
 
                             <button class='btn btn-primary'>Submit</button>
