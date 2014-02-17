@@ -1,0 +1,62 @@
+.carousel-caption{
+	z-index:10px;
+}
+
+.carousel-inner > .item > img{
+	position: absolute;
+	top: 50px;
+	left: 0;
+	min-width: 100%;
+	height: auto;
+}
+
+.tpad{
+    padding-bottom: 10px;
+}
+hr {
+    border-top: 1px solid #c9c9c9;   
+}
+.content{
+	background-color:#e9e6df;
+}
+
+.ftr{
+	background-color:#666;
+	padding:10px 0 10px 0;
+}
+.ftr address, .ftr a, .ftr p{
+	color: #c9c9c9;
+}
+.ft_space{
+	padding:0 10px 0 10px;
+}
+.extrapad{
+	padding-top: 20px;
+}
+
+@media(min-width: 300px){
+	.carousel-inner > .item{
+		height:290px;
+	}
+}
+@media(min-width: 500px){
+	.carousel-inner > .item{
+		height:400px;
+	}
+}
+@media(min-width: 600px){
+	.carousel-inner > .item{
+		height:500px;
+	}
+}
+@media(min-width: 750px){
+	.carousel-inner > .item{
+		height:600px;
+	}
+}
+
+@media(min-width: 1000px){
+	.carousel-inner > .item{
+		height:800px;
+	}
+}
